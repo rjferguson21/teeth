@@ -9,13 +9,13 @@ Array.prototype.toString = function (delim) {
 
 function vitals () {
     var bloodPressure = prompt("Blood pressure?");
-    \\checkbox added �vitals not taken� if checked bloodPressure===0
+    //checkbox added �vitals not taken� if checked bloodPressure===0
     if (bloodPressure === "0") {
         stringOut.push("Medical history reviewed.");}
         else{
             var pulse = prompt("Pulse?");
             var specialHealth = prompt ("Specific medical history findings?  If none enter '0'");
-            \\ remove if none enter 0 and add a checkbox �check if special medical history findings� if checked specialHealth===1 else specialHealth===0
+            // remove if none enter 0 and add a checkbox �check if special medical history findings� if checked specialHealth===1 else specialHealth===0
             if (specialHealth != "0") {
                 stringOut.push("Medical history reviewed, " + specialHealth + ".  BP " + bloodPressure + " P " + pulse + ".  ");
                 
@@ -46,7 +46,7 @@ function vitals () {
         for (var i=0; i< teeth.length; i++) {
             if (postTeeth.indexOf(teeth[i]) != -1 ) {
                 var surfaces = prompt ("tooth surfaces restoration # " + teeth[i] + "? 1= O, 2=B, 3=MO, 4=DO, 5=OB, 6= MOD, 7=MOB, 8=DOB, 9=MOL, 10=DOL, 11=MODB, 12=MODL, 13=MODBL, 14=OL, 15=L");
-                \\add checkboxes for input of surfaces
+                //add checkboxes for input of surfaces
                 switch (surfaces) {
                     case "0" : surfaces = "";
                     break;
@@ -83,7 +83,7 @@ function vitals () {
                 }
             } else {
                 var surfaces = prompt ("tooth surfaces restoration # " + teeth[i] + "? 1= F, 2=ML, 3=DL, 4=MF, 5=DF, 6= MDL, 7=MDF, 8=MIFL, 9=DIFL, 10=MDFL, 11=L, 12=IL, 13=IFL, 14=MIDFL");
-                \\add checkboxes for surfaces
+                //add checkboxes for surfaces
                 switch (surfaces) {
                     case "0" : surfaces = "";
                     break;
@@ -130,7 +130,7 @@ function vitals () {
     
     function nitrous() {
         var nitrousPrompt = prompt ("Nitrous administered? 1=yes");
-        \\add checkbox if checked nitrousPrompt===1
+        //add checkbox if checked nitrousPrompt===1
         if (nitrousPrompt==="1") {
             var nitrousPercent = prompt ("Percentage nitrous administered?");
             var nitrousTime = prompt ("Length of time nitrous administered?");
@@ -156,7 +156,7 @@ function vitals () {
             if (anesthesia[0].number >0) {
                 anesthesia[i].type = prompt("type of anesthetic, 1=citanest, 2=lidocaine, 3=septocaine100, 4=septocaine200, 5=lower cocktail, 6=upper cocktail, 7=carbocaine, 8=marcaine");
                 switch (anesthesia[i].type ) {
-                    \\add checkboxes for anesthetics
+                    //add checkboxes for anesthetics
                     case "1" : anesthesia[i].type = "4% citanest plain";
                     break;
                     case "2" : anesthesia[i].type = "2% lidocaine with 1:100,000 epinephrine";
@@ -357,7 +357,7 @@ stringOut.push ("curetted and irrigated with sterile water.  Pressure placed on 
 
 function typeOfAppointment () {
     var apptType = prompt("Type of appointment? 1= composite, 2=amalgam, 3= emergency, 4= crown prep, 5= extraction");
-    \\add checkboxes for type
+    //add checkboxes for type
     switch (apptType) {
         case "1" : composite();
         break;

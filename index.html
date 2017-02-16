@@ -1,0 +1,43 @@
+<!doctype html>
+<html ng-app="app">
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.3/angular-material.css">
+  </head>
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-messages.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-aria.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.3/angular-material.js"></script>
+    <script src="app.js"></script>
+
+    <div ng-controller="AppCtrl as ctrl" layout layout-padding layout-margin>
+      <form layout="column">
+        <md-input-container>
+          <label>Appointment:</label>
+          <md-select name="appType" ng-model="ctrl.appointment.type">
+            <md-option value="Composite"> Composite </md-option>
+            <md-option value="Amalgam"> Amalgam </md-option>
+            <md-option value="Emergency"> Emergency </md-option>
+            <md-option value="CrownPrep"> CrownPrep </md-option>
+            <md-option value="Extraction"> Extraction </md-option>
+          </md-select>
+        </md-input-container>
+
+        <md-input-container>
+          <label>Tooth</label>
+          <input name="tooth" ng-model="ctrl.tooth.id">
+        </md-input-container>
+        <md-input-container>
+          <md-select ng-model="ctrl.tooth.surface">
+            <label>Surface</label>
+            <md-option ng-repeat="surface in ctrl.surfaces" ng-value="surface">{{ surface }}</md-option>
+          </md-select>
+        </md-input-container>
+        <md-button ng-click="ctrl.addTooth(ctrl.tooth)" class="md-raised">Add</md-button>
+      </form>
+
+      {{ ctrl.appointment }}
+    </div>
+  </body>
+</html>

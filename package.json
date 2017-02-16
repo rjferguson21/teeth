@@ -1,0 +1,12 @@
+{
+  "name": "teeth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "MCHDupdate.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "aws --profile=personal s3 sync . s3://ferguso.com/teeth"
+  },
+  "author": "",
+  "license": "ISC"
+}
